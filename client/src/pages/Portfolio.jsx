@@ -15,12 +15,12 @@ const CATEGORY_COLORS = {
 };
 
 const fallbackPortfolio = [
-  { _id: '1', title: 'Apex Brand Refresh', category: 'Branding', client: 'Apex Group', images: ['https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=800&q=80'], slug: 'apex-brand-refresh' },
-  { _id: '2', title: 'Nabil Bank App Launch', category: 'Digital', client: 'Nabil Bank', images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'], slug: 'nabil-app-launch' },
-  { _id: '3', title: 'Himalayan Coffee Ad', category: 'Video', client: 'Himalayan Coffee Roasters', images: ['https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80'], slug: 'himalayan-coffee-ad' },
-  { _id: '4', title: 'Everest Gear Campaign', category: 'Performance', client: 'Everest Gear', images: ['https://images.unsplash.com/photo-1522163182402-834f871fd851?w=800&q=80'], slug: 'everest-gear-campaign' },
-  { _id: '5', title: 'Tech StartUp Identity', category: 'Branding', client: 'Innovate Nepal', images: ['https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'], slug: 'innovate-nepal-identity' },
-  { _id: '6', title: 'Tourism Board Promo', category: 'Video', client: 'Nepal Tourism', images: ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80'], slug: 'tourism-board-promo' },
+  { _id: '1', title: 'Global Brand Identity', category: 'Branding', client: 'Apex Group', images: ['https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=800&q=80'], slug: 'apex-brand-identity' },
+  { _id: '2', title: 'Tech Platform Launch', category: 'Digital', client: 'Nova Corp', images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'], slug: 'nova-platform-launch' },
+  { _id: '3', title: 'Cinematic Ad Campaign', category: 'Video', client: 'Orbit Media', images: ['https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80'], slug: 'orbit-cinematic-campaign' },
+  { _id: '4', title: 'Data-Driven Growth', category: 'Performance', client: 'Pulse Labs', images: ['https://images.unsplash.com/photo-1522163182402-834f871fd851?w=800&q=80'], slug: 'pulse-labs-growth' },
+  { _id: '5', title: 'B2B Lead Generation', category: 'Performance', client: 'Vertex Co', images: ['https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'], slug: 'vertex-lead-gen' },
+  { _id: '6', title: 'Corporate Rebranding', category: 'Branding', client: 'Zenith Inc', images: ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80'], slug: 'zenith-corporate-rebrand' },
 ];
 
 export default function Portfolio() {

@@ -31,7 +31,7 @@ export default function HeroSection() {
       </video>
       
       {/* Light Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-white/75 backdrop-blur-[2px]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]" aria-hidden="true" />
 
       {/* Content */}
       <motion.div

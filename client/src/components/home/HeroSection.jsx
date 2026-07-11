@@ -2,58 +2,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 
-// Aperture/iris SVG decoration
-function ApertureDecoration() {
-  return (
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden" aria-hidden="true">
-      {/* Radial blue glow behind */}
-      <div className="absolute w-[600px] h-[600px] rounded-full bg-[#2457E5] opacity-[0.05] blur-[100px]" />
-
-      {/* Aperture rings */}
-      <svg
-        className="absolute w-[700px] h-[700px] opacity-[0.08] aperture-ring-1"
-        viewBox="0 0 700 700"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="350" cy="350" r="280" stroke="#2457E5" strokeWidth="1" strokeDasharray="8 12" />
-        <circle cx="350" cy="350" r="200" stroke="#4A74F0" strokeWidth="1" strokeDasharray="4 16" />
-      </svg>
-      <svg
-        className="absolute w-[900px] h-[900px] opacity-[0.05] aperture-ring-2"
-        viewBox="0 0 900 900"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="450" cy="450" r="380" stroke="#2457E5" strokeWidth="1" strokeDasharray="16 8" />
-        <circle cx="450" cy="450" r="300" stroke="#4A74F0" strokeWidth="0.5" />
-      </svg>
-
-      {/* Camera aperture blades (simplified) */}
-      <svg
-        className="absolute w-[400px] h-[400px] opacity-[0.06]"
-        viewBox="0 0 400 400"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
-          <rect
-            key={i}
-            x="190"
-            y="80"
-            width="20"
-            height="120"
-            rx="4"
-            fill="#2457E5"
-            transform={`rotate(${angle} 200 200)`}
-          />
-        ))}
-        <circle cx="200" cy="200" r="60" stroke="#4A74F0" strokeWidth="1" fill="none" />
-      </svg>
-    </div>
-  );
-}
-
 const containerVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } },
@@ -67,19 +15,17 @@ const itemVariants = {
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-28"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28"
       aria-label="Hero section"
     >
-      {/* Background gradient */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(36,87,229,0.05) 0%, transparent 70%), linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%)',
-        }}
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80')` }}
         aria-hidden="true"
       />
-
-      <ApertureDecoration />
+      {/* Light Overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]" aria-hidden="true" />
 
       {/* Content */}
       <motion.div

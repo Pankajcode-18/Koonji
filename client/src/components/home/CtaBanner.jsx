@@ -55,7 +55,7 @@ export default function CtaBanner() {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
-            to="/contact"
+            to="/contact-us"
             id="cta-banner-contact"
             className="btn-primary"
           >

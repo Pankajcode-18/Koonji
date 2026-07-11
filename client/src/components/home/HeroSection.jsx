@@ -15,7 +15,7 @@ const itemVariants = {
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-[calc(100vh-72px)] mt-[72px] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[60vh] md:min-h-[calc(100vh-72px)] mt-[72px] py-16 flex items-center justify-center overflow-hidden"
       aria-label="Hero section"
     >
       {/* Background Video */}
@@ -24,7 +24,7 @@ export default function HeroSection() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-contain md:object-cover bg-slate-50"
+        className="absolute inset-0 w-full h-full object-cover"
         aria-hidden="true"
       >
         <source src="/homepagevideo.mp4" type="video/mp4" />

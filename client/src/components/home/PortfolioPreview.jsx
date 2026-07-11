@@ -12,10 +12,10 @@ const CATEGORY_COLORS = {
 };
 
 const fallbackItems = [
-  { _id: '1', title: 'TechNova Brand Identity', category: 'Branding', description: 'Complete brand overhaul for a fintech startup.' },
-  { _id: '2', title: 'MountainBrew Campaign', category: 'Performance', description: '3.2× ROAS performance campaign for a tea brand.' },
-  { _id: '3', title: 'YatraCo Brand Film', category: 'Video', description: '90-second cinematic brand film — 1.2M views.' },
-  { _id: '4', title: 'NepMart Digital Growth', category: 'Digital', description: '180% organic traffic growth in 6 months.' },
+  { _id: '1', title: 'TechNova Brand Identity', category: 'Branding', description: 'Complete brand overhaul for a fintech startup.', images: ['https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=800&q=80'] },
+  { _id: '2', title: 'MountainBrew Campaign', category: 'Performance', description: '3.2× ROAS performance campaign for a tea brand.', images: ['https://images.unsplash.com/photo-1522163182402-834f871fd851?w=800&q=80'] },
+  { _id: '3', title: 'YatraCo Brand Film', category: 'Video', description: '90-second cinematic brand film — 1.2M views.', images: ['https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80'] },
+  { _id: '4', title: 'NepMart Digital Growth', category: 'Digital', description: '180% organic traffic growth in 6 months.', images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'] },
 ];
 
 function PortfolioCard({ item }) {

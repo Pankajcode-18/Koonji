@@ -6,15 +6,69 @@ import useFetch from '../hooks/useFetch';
 import CtaBanner from '../components/home/CtaBanner';
 
 const fallbackServices = [
-  { _id: '1', title: 'Ad Creation', slug: 'ad-creation', shortDescription: 'High-converting ads that captivate, engage, and convert your target audience across every platform.', content: '<p>Our ad creation service is designed to stop the scroll and drive action.</p>', metaTitle: 'Ad Creation Services | Koonji Infotech' },
-  { _id: '2', title: 'Digital Marketing', slug: 'digital-marketing', shortDescription: 'Full-spectrum digital marketing that puts your brand in front of the right people at the right moment.', content: '<p>We provide comprehensive digital marketing strategies.</p>', metaTitle: 'Digital Marketing Services | Koonji Infotech' },
-  { _id: '3', title: 'Branding', slug: 'branding', shortDescription: 'Distinctive brand identities built to command attention, build trust, and stand the test of time.', content: '<p>Your brand is more than just a logo. We build distinct brand identities.</p>', metaTitle: 'Branding Services | Koonji Infotech' },
-  { _id: '4', title: 'Video Production', slug: 'video-production', shortDescription: 'Cinematic video content that tells your story and moves your audience to act.', content: '<p>Engage your audience with high-quality video production.</p>', metaTitle: 'Video Production Services | Koonji Infotech' },
-  { _id: '5', title: 'Performance Ads', slug: 'performance-ads', shortDescription: 'Data-fuelled paid advertising campaigns engineered for maximum ROI and measurable growth.', content: '<p>Maximize your ROI with our data-driven performance ads.</p>', metaTitle: 'Performance Ads | Koonji Infotech' },
-  { _id: '6', title: 'Web Development', slug: 'web-development', shortDescription: 'Custom, high-performance websites built for speed, scalability, and seamless user experiences.', content: '<p>We build blazing-fast, modern websites tailored to your needs.</p>', metaTitle: 'Web Development Services | Koonji Infotech' },
-  { _id: '7', title: 'Application Development', slug: 'application-development', shortDescription: 'Intuitive and powerful mobile applications designed to engage users and drive business growth.', content: '<p>Build robust applications for iOS and Android.</p>', metaTitle: 'App Development | Koonji Infotech' },
-  { _id: '8', title: 'SEO & Analytics', slug: 'seo-analytics', shortDescription: 'Data-driven SEO strategies that improve your visibility and drive organic growth.', content: '<p>Dominate search engines with our advanced SEO strategies.</p>', metaTitle: 'SEO & Analytics | Koonji Infotech' },
-  { _id: '9', title: 'UI/UX Design', slug: 'ui-ux-design', shortDescription: 'User-centric designs that delight your customers and reduce friction at every touchpoint.', content: '<p>We craft beautiful and highly functional user interfaces.</p>', metaTitle: 'UI/UX Design | Koonji Infotech' },
+  { 
+    _id: '1', title: 'Ad Creation', slug: 'ad-creation', 
+    shortDescription: 'High-converting ads that captivate, engage, and convert your target audience across every platform.', 
+    fullDescription: 'Our ad creation process goes beyond just making pretty pictures. We dive deep into consumer psychology to craft scroll-stopping creatives that demand attention. By combining compelling copy with striking visuals, we build ad campaigns tailored for platforms like Meta, Google, and TikTok to ensure your message resonates with the right audience at the perfect moment.',
+    features: ['Custom Graphic & Banner Design', 'Persuasive Ad Copywriting', 'A/B Testing & Creative Iteration', 'Platform-Specific Formats (Stories, Reels, Feed)', 'Campaign Strategy & Ideation'],
+    metaTitle: 'Ad Creation Services | Koonji Infotech' 
+  },
+  { 
+    _id: '2', title: 'Digital Marketing', slug: 'digital-marketing', 
+    shortDescription: 'Full-spectrum digital marketing that puts your brand in front of the right people at the right moment.', 
+    fullDescription: 'A successful digital presence requires a holistic, multi-channel strategy. Our digital marketing service encompasses everything from social media management to email marketing and content creation. We align our tactics with your core business objectives to build sustainable funnels that nurture leads, build community trust, and drive consistent revenue growth.',
+    features: ['Comprehensive Marketing Strategy', 'Social Media Management', 'Email Marketing & Automation', 'Lead Generation Campaigns', 'Monthly Performance Reporting'],
+    metaTitle: 'Digital Marketing Services | Koonji Infotech' 
+  },
+  { 
+    _id: '3', title: 'Branding', slug: 'branding', 
+    shortDescription: 'Distinctive brand identities built to command attention, build trust, and stand the test of time.', 
+    fullDescription: 'Your brand is the gut feeling your customers have about your business. We help you define, design, and deliver a cohesive brand identity that speaks directly to your target market. From conceptualizing the perfect logo to establishing your brand voice and visual guidelines, we ensure every touchpoint leaves a memorable and professional impression.',
+    features: ['Logo Design & Typography', 'Color Palette & Visual Guidelines', 'Brand Voice & Messaging Framework', 'Corporate Identity Kits', 'Rebranding & Refresh Strategies'],
+    metaTitle: 'Branding Services | Koonji Infotech' 
+  },
+  { 
+    _id: '4', title: 'Video Production', slug: 'video-production', 
+    shortDescription: 'Cinematic video content that tells your story and moves your audience to act.', 
+    fullDescription: 'Video is the most powerful medium for storytelling in the digital age. Our in-house production team handles everything from conceptualization and scriptwriting to filming, editing, and post-production. Whether you need a high-end corporate documentary, snappy social media reels, or product demonstration videos, we create visually stunning content that drives engagement.',
+    features: ['Concept Development & Storyboarding', 'Professional Filming & Lighting', 'Drone & Aerial Cinematography', 'Video Editing & Color Grading', 'Motion Graphics & Animation'],
+    metaTitle: 'Video Production Services | Koonji Infotech' 
+  },
+  { 
+    _id: '5', title: 'Performance Ads', slug: 'performance-ads', 
+    shortDescription: 'Data-fuelled paid advertising campaigns engineered for maximum ROI and measurable growth.', 
+    fullDescription: 'Stop wasting ad spend on campaigns that don’t deliver. Our performance marketing team specializes in data-driven media buying. We meticulously track every click, conversion, and dollar spent to optimize your campaigns in real-time. By leveraging advanced targeting and retargeting strategies, we scale your business aggressively while maintaining a profitable Return on Ad Spend (ROAS).',
+    features: ['Google Ads & Search Engine Marketing', 'Meta (Facebook/Instagram) Advertising', 'TikTok & LinkedIn Ads', 'Advanced Pixel Setup & Conversion Tracking', 'Continuous Bid Optimization'],
+    metaTitle: 'Performance Ads | Koonji Infotech' 
+  },
+  { 
+    _id: '6', title: 'Web Development', slug: 'web-development', 
+    shortDescription: 'Custom, high-performance websites built for speed, scalability, and seamless user experiences.', 
+    fullDescription: 'Your website is your ultimate digital storefront. We build custom, blazing-fast web applications utilizing modern frameworks like React, Next.js, and Node.js. We don’t just use templates; we architect scalable solutions optimized for performance, security, and search engines. From e-commerce platforms to robust corporate sites, we ensure your web presence is flawless.',
+    features: ['Custom Frontend & Backend Development', 'E-commerce Solutions', 'CMS Integration (WordPress, Sanity, etc.)', 'Performance & Speed Optimization', 'Responsive & Mobile-First Coding'],
+    metaTitle: 'Web Development Services | Koonji Infotech' 
+  },
+  { 
+    _id: '7', title: 'Application Development', slug: 'application-development', 
+    shortDescription: 'Intuitive and powerful mobile applications designed to engage users and drive business growth.', 
+    fullDescription: 'Take your business directly to your customers’ pockets. We design and develop cross-platform mobile applications for iOS and Android that are intuitive, feature-rich, and built to scale. From the initial wireframes to app store deployment, our engineering team ensures a seamless user experience that keeps your audience coming back.',
+    features: ['iOS & Android App Development', 'Cross-Platform Frameworks (React Native/Flutter)', 'UI/UX App Prototyping', 'API Integration & Backend Infrastructure', 'App Store Deployment & Maintenance'],
+    metaTitle: 'App Development | Koonji Infotech' 
+  },
+  { 
+    _id: '8', title: 'SEO & Analytics', slug: 'seo-analytics', 
+    shortDescription: 'Data-driven SEO strategies that improve your visibility and drive organic growth.', 
+    fullDescription: 'Visibility is everything. Our SEO experts implement white-hat strategies to organically rank your business at the top of search engine results. We combine technical audits, on-page optimization, and high-quality link building to drive sustained, targeted traffic to your site. Coupled with deep analytics integration, you will always know exactly how your audience is behaving.',
+    features: ['Comprehensive Technical SEO Audits', 'Keyword Research & Competitor Analysis', 'On-Page & Off-Page Optimization', 'Google Analytics & Tag Manager Setup', 'Local SEO & Google Business Profile Management'],
+    metaTitle: 'SEO & Analytics | Koonji Infotech' 
+  },
+  { 
+    _id: '9', title: 'UI/UX Design', slug: 'ui-ux-design', 
+    shortDescription: 'User-centric designs that delight your customers and reduce friction at every touchpoint.', 
+    fullDescription: 'Great design is about how it works, not just how it looks. Our UI/UX process is heavily rooted in user research and behavioral psychology. We create wireframes, interactive prototypes, and high-fidelity interfaces that minimize friction and guide users naturally toward conversion points, ensuring a delightful and intuitive experience.',
+    features: ['User Research & Persona Development', 'Wireframing & Interactive Prototyping', 'High-Fidelity Interface Design', 'Usability Testing & Feedback Integration', 'Design Systems & Component Libraries'],
+    metaTitle: 'UI/UX Design | Koonji Infotech' 
+  },
 ];
 
 export default function ServiceDetail() {

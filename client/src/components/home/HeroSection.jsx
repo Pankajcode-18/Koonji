@@ -15,17 +15,23 @@ const itemVariants = {
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28"
+      className="relative min-h-[calc(100vh-72px)] mt-[72px] flex items-center justify-center overflow-hidden"
       aria-label="Hero section"
     >
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80')` }}
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
         aria-hidden="true"
-      />
+      >
+        <source src="/homepagevideo.mp4" type="video/mp4" />
+      </video>
+      
       {/* Light Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-white/75 backdrop-blur-[2px]" aria-hidden="true" />
 
       {/* Content */}
       <motion.div

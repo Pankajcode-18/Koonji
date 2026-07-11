@@ -13,12 +13,7 @@ const CATEGORY_COLORS = {
   'Performance Ads': '#2457E5',
 };
 
-const fallbackBlog = [
-  { _id: '1', title: 'The Future of Performance Marketing in Nepal', category: 'Performance Ads', excerpt: 'How data-driven strategies are changing the landscape of advertising in Kathmandu.', publishedAt: '2024-05-12T00:00:00Z', readTime: 5, slug: 'future-of-performance-marketing' },
-  { _id: '2', title: 'Why Your Business Needs a Brand Identity, Not Just a Logo', category: 'Branding', excerpt: 'A logo is just the beginning. Discover how a complete brand system drives loyalty.', publishedAt: '2024-04-28T00:00:00Z', readTime: 7, slug: 'brand-identity-vs-logo' },
-  { _id: '3', title: 'Maximizing ROI with Short-Form Video', category: 'Video Production', excerpt: 'TikTok and Reels are dominating attention. Here is how your business can capitalize.', publishedAt: '2024-04-10T00:00:00Z', readTime: 4, slug: 'maximizing-roi-short-form-video' },
-  { _id: '4', title: 'SEO Best Practices for 2024', category: 'Digital Marketing', excerpt: 'Stay ahead of algorithm updates with these actionable SEO strategies.', publishedAt: '2024-03-22T00:00:00Z', readTime: 6, slug: 'seo-best-practices-2024' },
-];
+import { fallbackBlog } from './BlogDetail';
 
 export default function Blog() {
   const { data, loading } = useFetch('/blog');

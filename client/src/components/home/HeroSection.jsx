@@ -48,7 +48,7 @@ export default function HeroSection() {
         {/* H1 */}
         <motion.h1
           variants={itemVariants}
-          className="font-serif text-[2.8rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-semibold leading-[1.1] tracking-[-0.01em] text-gray-900 max-w-5xl mx-auto"
+          className="font-serif text-4xl sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-semibold leading-[1.1] tracking-[-0.01em] text-gray-900 max-w-5xl mx-auto px-4"
         >
           We Build Advertising{' '}
           <span

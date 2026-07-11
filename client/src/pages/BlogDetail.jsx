@@ -110,7 +110,7 @@ export default function BlogDetail() {
               className="lg:w-2/3"
             >
               <div 
-                className="prose-koonji bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm"
+                className="prose-koonji bg-white p-5 md:p-12 rounded-3xl border border-gray-100 shadow-sm overflow-hidden"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
 

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function PageHero({ eyebrow, title, titleHighlight, description, bgImage }) {
   return (
-    <section className="relative pt-40 pb-24 overflow-hidden border-b border-gray-100 bg-slate-50">
+    <section className="relative mt-[72px] pt-16 pb-24 overflow-hidden border-b border-gray-100 bg-slate-50">
       {/* Background Image with Light Overlay */}
       {bgImage && (
         <>
@@ -10,7 +10,7 @@ export default function PageHero({ eyebrow, title, titleHighlight, description, 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
             style={{ backgroundImage: `url(${bgImage})` }} 
           />
-          <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]" />
         </>
       )}
       

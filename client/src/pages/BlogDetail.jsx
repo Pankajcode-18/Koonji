@@ -50,7 +50,7 @@ export default function BlogDetail() {
       </Helmet>
 
       {/* Article header */}
-      <section className="pt-36 pb-12 bg-white relative overflow-hidden">
+      <section className="mt-[72px] pt-16 pb-12 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ background: 'radial-gradient(ellipse 50% 60% at 50% 30%, var(--color-brand) 0%, transparent 70%)' }} aria-hidden="true" />
         <div className="container-koonji relative z-10 max-w-3xl">
           <Link to="/blog" className="inline-flex items-center gap-2 text-slate-500 text-sm hover:text-brand transition-colors mb-8">

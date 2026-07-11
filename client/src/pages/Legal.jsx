@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function LegalHero({ title }) {
   return (
-    <section className="pt-36 pb-16 bg-white relative overflow-hidden">
+    <section className="mt-[72px] pt-16 pb-16 bg-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03]" style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 30%, var(--color-brand) 0%, transparent 70%)' }} aria-hidden="true" />
       <div className="container-koonji relative z-10 max-w-3xl">
         <motion.h1

@@ -103,7 +103,7 @@ export default function ServiceDetail() {
       </Helmet>
 
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-white relative overflow-hidden">
+      <section className="mt-[72px] pt-16 pb-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ background: 'radial-gradient(ellipse 60% 50% at 30% 50%, var(--color-brand) 0%, transparent 70%)' }} aria-hidden="true" />
         <div className="container-koonji relative z-10">
           <Link to="/services" className="inline-flex items-center gap-2 text-slate-500 text-sm hover:text-brand transition-colors mb-8">

@@ -15,8 +15,21 @@ const iconMap = {
   default: FiZap,
 };
 
+const fallbackServices = [
+  { _id: '1', title: 'Ad Creation', slug: 'ad-creation', shortDescription: 'High-converting ads that captivate, engage, and convert your target audience across every platform.', icon: 'MdCampaign' },
+  { _id: '2', title: 'Digital Marketing', slug: 'digital-marketing', shortDescription: 'Full-spectrum digital marketing that puts your brand in front of the right people at the right moment.', icon: 'MdTrendingUp' },
+  { _id: '3', title: 'Branding', slug: 'branding', shortDescription: 'Distinctive brand identities built to command attention, build trust, and stand the test of time.', icon: 'MdBrush' },
+  { _id: '4', title: 'Video Production', slug: 'video-production', shortDescription: 'Cinematic video content that tells your story and moves your audience to act.', icon: 'MdVideocam' },
+  { _id: '5', title: 'Performance Ads', slug: 'performance-ads', shortDescription: 'Data-fuelled paid advertising campaigns engineered for maximum ROI and measurable growth.', icon: 'MdShowChart' },
+  { _id: '6', title: 'Web Development', slug: 'web-development', shortDescription: 'Custom, high-performance websites built for speed, scalability, and seamless user experiences.', icon: 'MdWeb' },
+  { _id: '7', title: 'Application Development', slug: 'application-development', shortDescription: 'Intuitive and powerful mobile applications designed to engage users and drive business growth.', icon: 'MdPhoneIphone' },
+  { _id: '8', title: 'SEO & Analytics', slug: 'seo-analytics', shortDescription: 'Data-driven SEO strategies that improve your visibility and drive organic growth.', icon: 'MdAnalytics' },
+  { _id: '9', title: 'UI/UX Design', slug: 'ui-ux-design', shortDescription: 'User-centric designs that delight your customers and reduce friction at every touchpoint.', icon: 'MdDesignServices' },
+];
+
 export default function Services() {
   const { data, loading, error } = useFetch('/services');
+  const servicesList = (data && data.length > 0) ? data : fallbackServices;
 
   return (
     <>
@@ -43,7 +56,7 @@ export default function Services() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {(data || []).map((service, i) => {
+              {servicesList.map((service, i) => {
                 const Icon = iconMap[service.icon] || iconMap.default;
                 return (
                   <motion.div

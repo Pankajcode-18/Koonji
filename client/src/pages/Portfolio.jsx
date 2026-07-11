@@ -14,14 +14,7 @@ const CATEGORY_COLORS = {
   Digital: '#06B6D4',
 };
 
-const fallbackPortfolio = [
-  { _id: '1', title: 'Global Brand Identity', category: 'Branding', client: 'Apex Group', images: ['https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=800&q=80'], slug: 'apex-brand-identity' },
-  { _id: '2', title: 'Tech Platform Launch', category: 'Digital', client: 'Nova Corp', images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'], slug: 'nova-platform-launch' },
-  { _id: '3', title: 'Cinematic Ad Campaign', category: 'Video', client: 'Orbit Media', images: ['https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80'], slug: 'orbit-cinematic-campaign' },
-  { _id: '4', title: 'Data-Driven Growth', category: 'Performance', client: 'Pulse Labs', images: ['https://images.unsplash.com/photo-1522163182402-834f871fd851?w=800&q=80'], slug: 'pulse-labs-growth' },
-  { _id: '5', title: 'B2B Lead Generation', category: 'Performance', client: 'Vertex Co', images: ['https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'], slug: 'vertex-lead-gen' },
-  { _id: '6', title: 'Corporate Rebranding', category: 'Branding', client: 'Zenith Inc', images: ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80'], slug: 'zenith-corporate-rebrand' },
-];
+import { fallbackPortfolio } from './PortfolioDetail';
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -97,31 +90,33 @@ export default function Portfolio() {
                     className="card-light overflow-hidden group"
                   >
                     {/* Image */}
-                    <div className="h-52 relative overflow-hidden" style={{ background: `linear-gradient(135deg, #f3f4f6, #e5e7eb)` }}>
-                      {item.images && item.images[0] ? (
-                        <img
-                          src={item.images[0]}
-                          alt={item.title}
-                          loading="lazy"
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                      ) : (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-20 h-20 rounded-full border-2 border-brand opacity-20" />
-                        </div>
-                      )}
-                      <span className="absolute top-4 left-4 text-xs font-semibold px-3 py-1 rounded-full"
-                        style={{ background: `${color}22`, color, border: `1px solid ${color}44` }}>
-                        {item.category}
-                      </span>
-                    </div>
-                    <div className="p-6">
-                      <h2 className="font-serif text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand transition-colors">
-                        {item.title}
-                      </h2>
-                      {item.client && <p className="text-slate-500 text-xs mb-2">Client: {item.client}</p>}
-                      <p className="text-slate-600 text-sm leading-relaxed line-clamp-2">{item.description}</p>
-                    </div>
+                    <Link to={`/portfolio/${item.slug}`} className="block h-full cursor-pointer">
+                      <div className="h-52 relative overflow-hidden" style={{ background: `linear-gradient(135deg, #f3f4f6, #e5e7eb)` }}>
+                        {item.images && item.images[0] ? (
+                          <img
+                            src={item.images[0]}
+                            alt={item.title}
+                            loading="lazy"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-20 h-20 rounded-full border-2 border-brand opacity-20" />
+                          </div>
+                        )}
+                        <span className="absolute top-4 left-4 text-xs font-semibold px-3 py-1 rounded-full"
+                          style={{ background: `${color}22`, color, border: `1px solid ${color}44` }}>
+                          {item.category}
+                        </span>
+                      </div>
+                      <div className="p-6">
+                        <h2 className="font-serif text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand transition-colors">
+                          {item.title}
+                        </h2>
+                        {item.client && <p className="text-slate-500 text-xs mb-2">Client: {item.client}</p>}
+                        <p className="text-slate-600 text-sm leading-relaxed line-clamp-2">{item.description}</p>
+                      </div>
+                    </Link>
                   </motion.article>
                 );
               })}

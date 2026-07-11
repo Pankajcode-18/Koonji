@@ -7,6 +7,7 @@ import Team from '../pages/Team';
 import Services from '../pages/Services';
 import ServiceDetail from '../pages/ServiceDetail';
 import Portfolio from '../pages/Portfolio';
+import PortfolioDetail from '../pages/PortfolioDetail';
 import Blog from '../pages/Blog';
 import BlogDetail from '../pages/BlogDetail';
 import Contact from '../pages/Contact';
@@ -34,6 +35,7 @@ export default function AppRouter() {
           <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
           <Route path="/services/:slug" element={<PageWrapper><ServiceDetail /></PageWrapper>} />
           <Route path="/portfolio" element={<PageWrapper><Portfolio /></PageWrapper>} />
+          <Route path="/portfolio/:slug" element={<PageWrapper><PortfolioDetail /></PageWrapper>} />
           <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
           <Route path="/blog/:slug" element={<PageWrapper><BlogDetail /></PageWrapper>} />
           <Route path="/contact-us" element={<PageWrapper><Contact /></PageWrapper>} />

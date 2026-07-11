@@ -24,7 +24,7 @@ export default function HeroSection() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain md:object-cover bg-slate-50"
         aria-hidden="true"
       >
         <source src="/homepagevideo.mp4" type="video/mp4" />

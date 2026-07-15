@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const stats = [
   { value: 2012, label: 'Year Founded', suffix: '', prefix: '', disableComma: true },
@@ -36,22 +37,7 @@ function Counter({ value, suffix, prefix, start, disableComma }) {
 
 export default function StatsBar() {
   const ref = useRef(null);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setInView(true);
-        observer.unobserve(el);
-      }
-    }, { threshold: 0.2 });
-    
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
     <section
@@ -62,9 +48,13 @@ export default function StatsBar() {
       <div className="container-koonji py-12">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x sm:divide-gray-200">
           {stats.map((stat, i) => (
-            <div
+            <motion.div
               key={stat.label}
-              className={`text-center px-8 reveal reveal-delay-${i + 1}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15, duration: 0.6 }}
+              className="text-center px-8"
             >
               <div className="font-serif text-4xl md:text-5xl font-semibold text-brand mb-2">
                 <Counter
@@ -76,7 +66,7 @@ export default function StatsBar() {
                 />
               </div>
               <div className="text-slate-500 text-sm tracking-wider uppercase">{stat.label}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

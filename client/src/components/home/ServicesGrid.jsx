@@ -98,8 +98,8 @@ export default function ServicesGrid() {
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
           >
-            {services.map((service, index) => (
-              <ServiceCard key={service._id || service.slug} service={service} index={index} />
+            {services.map((service) => (
+              <ServiceCard key={service._id || service.slug} service={service} />
             ))}
           </motion.div>
         )}

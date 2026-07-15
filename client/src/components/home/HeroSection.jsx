@@ -28,7 +28,7 @@ export default function HeroSection() {
           className="absolute inset-0 w-full h-full object-cover"
           aria-hidden="true"
         >
-          <source src="/homepagevideo.mp4" type="video/mp4" />
+          <source src="/logo-video.mp4" type="video/mp4" />
         </video>
         
         {/* Light Overlay to ensure text readability - only active on desktop when text is over the video */}
